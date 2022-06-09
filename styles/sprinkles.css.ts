@@ -6,6 +6,7 @@ import {
 import palette from './colors.css.ts';
 import { fontFamily, fontWeight, lineHeight, fontSize } from './typography.css.ts';
 import { size, space } from './typography.css.ts';
+import { borderSize, borderRadius } from './border.css.ts';
 
 
 const responsiveProperties = defineProperties({
@@ -77,7 +78,13 @@ const systemProperties = defineProperties({
     fontFamily: fontFamily,
     fontSize: fontSize,
     fontWeight: fontWeight,
-    lineHeight: lineHeight
+    lineHeight: lineHeight,
+    borderRadius: borderRadius,
+    borderTopWidth: borderSize,
+    borderLeftWidth: borderSize,
+    borderBottomWidth: borderSize,
+    borderRightWidth: borderSize,
+    borderWidth: borderSize
   }
 });
 
