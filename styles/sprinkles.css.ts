@@ -3,10 +3,12 @@ import {
   createSprinkles,
 } from '@vanilla-extract/sprinkles';
 
-import palette from './colors.css.ts';
-import { fontFamily, fontWeight, lineHeight, fontSize } from './typography.css.ts';
-import { size, space } from './typography.css.ts';
-import { borderSize, borderRadius } from './border.css.ts';
+import palette from './colors.css';
+import { fontFamily, fontWeight, lineHeight, fontSize } from './typography.css';
+import { size, space, position} from './size.css';
+import { borderSize, borderRadius } from './border.css';
+import { relative } from 'path/posix';
+import { style } from '@vanilla-extract/css';
 
 
 const responsiveProperties = defineProperties({
@@ -31,8 +33,17 @@ const responsiveProperties = defineProperties({
       'stretch',
       'flex-start',
       'center',
-      'flex-end'
+      'flex-end',
+      'baseline'
     ],
+    flex: {
+      '1': '1 1 0%',
+      'auto': '1 1 0%',
+      'initial': '1 1 0%',
+      'none': 'none'
+    },
+    flexWrap: ['wrap', 'wrap-reverse', 'nowrap'],
+    position: ['static', 'fixed', 'absolute', 'relative', 'sticky'],
     paddingTop: space,
     paddingBottom: space,
     paddingLeft: space,
@@ -42,7 +53,12 @@ const responsiveProperties = defineProperties({
     marginLeft: space,
     marginRight: space,
     gap: space,
-    width: size
+    width: size,
+    height: size,
+    top: position,
+    left: position, 
+    bottom: position,
+    right: position,
   },
   shorthands: {
     padding: [
@@ -61,7 +77,13 @@ const responsiveProperties = defineProperties({
     ],
     marginX: ['marginLeft', 'marginRight'],
     marginY: ['marginTop', 'marginBottom'],
-    placeItems: ['justifyContent', 'alignItems']
+    placeItems: ['justifyContent', 'alignItems'],
+    inset: [
+      'top', 
+      'left', 
+      'right', 
+      'bottom'
+    ]
   }
 });
 
@@ -75,6 +97,7 @@ const systemProperties = defineProperties({
   properties: {
     color: palette,
     background: palette,
+    borderColor: palette,
     fontFamily: fontFamily,
     fontSize: fontSize,
     fontWeight: fontWeight,
@@ -84,14 +107,27 @@ const systemProperties = defineProperties({
     borderLeftWidth: borderSize,
     borderBottomWidth: borderSize,
     borderRightWidth: borderSize,
-    borderWidth: borderSize
+    borderWidth: borderSize,
+    objectFit: ['contain', 'cover', 'fill', 'none', 'scale-down']
   }
 });
 
-export const sprinkles = createSprinkles(
+export const sprinklesTailwind = createSprinkles(
   responsiveProperties,
   systemProperties
 );
 
+export const srOnly = style({
+  position: 'absolute',
+  width: '1px',
+  height: '1px',
+  padding: '0',
+  margin: '-1px',
+  overflow: 'hidden',
+  clip: 'rect(0, 0, 0, 0)',
+  whiteSpace: 'nowrap',
+  borderWidth: '0'
+});
+
 // It's a good idea to export the Sprinkles type too
-export type Sprinkles = Parameters<typeof sprinkles>[0];
+export type Sprinkles = Parameters<typeof sprinklesTailwind >[0];

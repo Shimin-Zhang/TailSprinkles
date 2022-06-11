@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance:  none;
+  appearance: none;
+  bakcground: transparent
+}

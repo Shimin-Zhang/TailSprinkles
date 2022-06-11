@@ -128,7 +128,9 @@ const palette = {
     'orange-6': '#fd7e14',
     'orange-7': '#f76707',
     'orange-8': '#e8590c',
-    'orange-9': '#d9480f'
+    'orange-9': '#d9480f',
+    'black': 'black',
+    'white': 'white'
 };
 
 export default palette;
