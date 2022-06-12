@@ -1,5 +1,7 @@
 html,
 body {
+  --shadow-color: 220 40% 2%;
+  --shadow-strength: 10%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -13,11 +15,13 @@ a {
 
 * {
   box-sizing: border-box;
+  border: none;
+  border-width: 0;
+  border-style: solid;
 }
 
 button {
   -webkit-appearance: none;
   -moz-appearance:  none;
   appearance: none;
-  bakcground: transparent
 }

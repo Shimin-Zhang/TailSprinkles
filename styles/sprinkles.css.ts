@@ -6,8 +6,7 @@ import {
 import palette from './colors.css';
 import { fontFamily, fontWeight, lineHeight, fontSize } from './typography.css';
 import { size, space, position} from './size.css';
-import { borderSize, borderRadius } from './border.css';
-import { relative } from 'path/posix';
+import { borderSize, borderRadius, shadows } from './border.css';
 import { style } from '@vanilla-extract/css';
 
 
@@ -53,8 +52,8 @@ const responsiveProperties = defineProperties({
     marginLeft: space,
     marginRight: space,
     gap: space,
-    width: size,
-    height: size,
+    width: {... size, 'screen': '100vw' },
+    height: {... size, 'screen': '100vh'},
     top: position,
     left: position, 
     bottom: position,
@@ -108,6 +107,7 @@ const systemProperties = defineProperties({
     borderBottomWidth: borderSize,
     borderRightWidth: borderSize,
     borderWidth: borderSize,
+    boxShadow: shadows,
     objectFit: ['contain', 'cover', 'fill', 'none', 'scale-down']
   }
 });
@@ -128,6 +128,12 @@ export const srOnly = style({
   whiteSpace: 'nowrap',
   borderWidth: '0'
 });
+
+export const clickable = style ({
+  ':hover': {
+    cursor: 'pointer'
+  }
+})
 
 // It's a good idea to export the Sprinkles type too
 export type Sprinkles = Parameters<typeof sprinklesTailwind >[0];

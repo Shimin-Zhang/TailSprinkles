@@ -1,8 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { sprinklesTailwind as st, srOnly } from '../styles/sprinkles.css';
-import { fontWeight } from '../styles/typography.css';
+import { sprinklesTailwind as st, srOnly, clickable } from '../styles/sprinkles.css';
 
 
 const Home: NextPage = () => {
@@ -18,6 +16,10 @@ const Home: NextPage = () => {
         st({
           display: 'flex',
           justifyContent: 'center',
+          flexDirection: 'column',
+          alignItems: 'center',
+          background: 'gray-1',
+          height: 'screen',
         })
       }>
         <h1>
@@ -27,17 +29,24 @@ const Home: NextPage = () => {
         className = {
           st({
             display: 'flex',
-            fontFamily: 'sans-serif'
+            fontFamily: 'sans-serif',
+            width: 'size-content-3',
+            marginY: 'size-auto',
+            background: 'white',
+            borderRadius: 'radius-3',
+            boxShadow: 'shadow-2'
           })
         }>
           <div 
             className = {
               st({
                 flex: 'none',
-                width: 'size-13',
+                width: 'size-12',
+                height: 'size-13',
                 position: 'relative',
               })
-            }>
+            }
+            >
             <img src="/jacket.jpg" alt="" 
             loading="lazy" className = {
               st({
@@ -66,10 +75,11 @@ const Home: NextPage = () => {
                 className = {
                   st({
                     flex: 'auto',
-                    fontSize: 'font-size-3',
+                    fontSize: 'font-size-2',
                     lineHeight: 'font-lineheight-4',
                     fontWeight: 'font-weight-6',
-                    color: 'gray-9'
+                    color: 'gray-9',
+                    marginY: 'size-0'
                   })
                 }>
                 Classic Utility Jacket
@@ -117,6 +127,7 @@ const Home: NextPage = () => {
                     display: 'flex',
                     fontSize: 'font-size-0',
                     lineHeight: 'font-lineheight-0',
+                    gap: 'size-2'
                   })
                 }>
                 <label>
@@ -127,9 +138,10 @@ const Home: NextPage = () => {
                       st({
                         width: 'size-7',
                         height: 'size-7',
-                        borderRadius: 'radius-4',
+                        borderRadius: 'radius-2',
                         display: 'flex',
-                        color: 'gray-7',
+                        color: 'gray-1',
+                        background: 'gray-9',
                         justifyContent: 'center',
                         alignItems: 'center'
                       })
@@ -221,24 +233,24 @@ const Home: NextPage = () => {
                   st({
                     flex: 'auto',
                     display: 'flex',
-
+                    gap: 'size-3'
                   })
                 }>
                 <button 
-                  className = {
+                  className = { clickable +  ' ' +  
                     st({
                       height: 'size-8',
                       paddingX: 'size-5',
                       fontWeight: 'font-weight-6',
                       borderRadius: 'radius-2',
-                      background: 'black',
+                      background: 'gray-9',
                       color: 'white'
                     })
                   } type="submit">
                   Buy now
                 </button>
                 <button 
-                  className = {
+                  className = {[
                     st({
                       height: 'size-8',
                       paddingX: 'size-5',
@@ -248,13 +260,13 @@ const Home: NextPage = () => {
                       borderColor: 'gray-2',
                       color: 'gray-8',
                       background: 'white',
-                    })
+                    }), clickable].join(' ')
                   } type="button">
                   Add to bag
                 </button>
               </div>
               <button
-                className = {
+                className = { clickable + ' ' +
                   st({
                     flex: 'none',
                     display: 'flex',
@@ -279,7 +291,8 @@ const Home: NextPage = () => {
               st({
                 fontSize: 'font-size-0',
                 lineHeight: 'font-lineheight-0',
-                color: 'gray-7'
+                color: 'gray-7',
+                marginY: 'size-0'
               })
             }>
               Free shipping on all continental US orders.

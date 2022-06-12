@@ -16,6 +16,7 @@ export const size = {
     'size-13': '15rem',
     'size-14': '20rem',
     'size-15': '30rem',
+    'size-auto': 'auto',
     'size-content-1': '20ch',
     'size-content-2': '45ch',
     'size-content-3': '60ch',
@@ -23,12 +24,12 @@ export const size = {
     'size-header-2': '25ch',
     'size-header-3': '35ch',
     'full': '100%',
-    'screen': '100vw'
 }
 
 export const space = {
     'size-000': '-.5rem',
     'size-00': '-.25rem',
+    'size-0': '0',
     'size-1': '.25rem',
     'size-2': '.5rem',
     'size-3': '1rem',
