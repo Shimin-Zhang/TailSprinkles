@@ -39,7 +39,10 @@ const Home: NextPage = () => {
               tablet: 'size-auto',
               mobile: 'size-3',
             },
-            background: 'white',
+            background: {
+             lightMode: 'white',
+             darkMode: 'grape-9',
+            },
             borderRadius: 'radius-3',
             boxShadow: 'shadow-2'
           })
@@ -109,7 +112,10 @@ const Home: NextPage = () => {
                     fontSize: 'font-size-2',
                     lineHeight: 'font-lineheight-4',
                     fontWeight: 'font-weight-6',
-                    color: 'gray-9',
+                    color: { 
+                      lightMode: 'gray-9',
+                      darkMode: 'gray-1',
+                    },
                     marginY: {
                       tablet: 'size-0',
                       mobile: 'size-0',
@@ -124,7 +130,10 @@ const Home: NextPage = () => {
                     fontSize: 'font-size-3',
                     lineHeight: 'font-lineheight-4',
                     fontWeight: 'font-weight-6',
-                    color:  'gray-6'
+                    color: { 
+                      lightMode:  'gray-6',
+                      darkMode:  'gray-2'
+                    },
                   })
                 }>
                 $110.00
@@ -136,7 +145,10 @@ const Home: NextPage = () => {
                     tablet: 'full',
                   },
                   flex: 'none',
-                  color:  'gray-7',
+                  color: { 
+                    lightMode:  'gray-7',
+                    darkMode:  'gray-3',
+                  },
                   fontWeight: 'font-weight-5',
                   fontSize: 'font-size-0',
                   lineHeight: 'font-lineheight-0',
@@ -168,7 +180,10 @@ const Home: NextPage = () => {
                     mobile: 'size-6',
                     tablet: 'size-6',
                   },
-                  borderColor: 'gray-2',
+                  borderColor: { 
+                    lightMode: 'gray-2',
+                    darkMode: 'gray-8',
+                  },
                   borderBottomWidth: 'border-size-1',
                   alignItems: 'baseline'
                 })
@@ -241,7 +256,10 @@ const Home: NextPage = () => {
                           mobile: 'flex',
                           tablet: 'flex',
                         },
-                        color: 'gray-7',
+                        color: { 
+                          lightMode: 'gray-7',
+                          darkMode: 'gray-3',
+                        },
                         justifyContent: { 
                           mobile: 'center',
                           tablet: 'center',
@@ -251,7 +269,7 @@ const Home: NextPage = () => {
                           tablet: 'center'
                         },
                       })
-                    }>
+                    }>            
                     S
                   </div>
                 </label>
@@ -273,7 +291,10 @@ const Home: NextPage = () => {
                           mobile: 'flex',
                           tablet: 'flex',
                         },
-                        color: 'gray-7',
+                        color: { 
+                          lightMode: 'gray-7',
+                          darkMode: 'gray-3',
+                        },
                         justifyContent: { 
                           mobile: 'center',
                           tablet: 'center',
@@ -283,7 +304,7 @@ const Home: NextPage = () => {
                           tablet: 'center'
                         },
                       })
-                    }>
+                    }>            
                     M
                   </div>
                 </label>
@@ -305,7 +326,10 @@ const Home: NextPage = () => {
                           mobile: 'flex',
                           tablet: 'flex',
                         },
-                        color: 'gray-7',
+                        color: { 
+                          lightMode: 'gray-7',
+                          darkMode: 'gray-3',
+                        },
                         justifyContent: { 
                           mobile: 'center',
                           tablet: 'center',
@@ -337,7 +361,10 @@ const Home: NextPage = () => {
                           mobile: 'flex',
                           tablet: 'flex',
                         },
-                        color: 'gray-7',
+                        color: { 
+                          lightMode: 'gray-7',
+                          darkMode: 'gray-3',
+                        },
                         justifyContent: { 
                           mobile: 'center',
                           tablet: 'center',
@@ -438,8 +465,14 @@ const Home: NextPage = () => {
                       borderRadius: 'radius-2',
                       borderWidth: 'border-size-1',
                       borderColor: 'gray-2',
-                      color: 'gray-8',
-                      background: 'white',
+                      color: {
+                        lightMode: 'gray-8',
+                        darkMode: 'gray-4',
+                      },
+                      background: {
+                       lightMode: 'white',
+                       darkMode: 'grape-7',
+                     },
                     }), clickable].join(' ')
                   } type="button">
                   Add to bag
@@ -473,9 +506,15 @@ const Home: NextPage = () => {
                       tablet: 'size-7',
                     },
                     borderRadius: 'radius-2',
-                    color: 'gray-3',
+                    color: { 
+                      lightMode: 'gray-3',
+                      darkMode: 'gray-3',
+                    },
                     borderWidth: 'border-size-1',
-                    background: 'white',
+                    background: {
+                       lightMode: 'white',
+                       darkMode: 'grape-7',
+                     },
                     borderColor: 'gray-2'
                   })
                 } type="button" aria-label="Like">
@@ -489,7 +528,10 @@ const Home: NextPage = () => {
               st({
                 fontSize: 'font-size-0',
                 lineHeight: 'font-lineheight-0',
-                color: 'gray-7',
+                color: { 
+                  lightMode: 'gray-7',
+                  darkMode: 'gray-2',
+                },
                 marginY: 'size-0'
               })
             }>
