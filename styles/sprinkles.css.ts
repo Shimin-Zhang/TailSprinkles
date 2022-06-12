@@ -16,9 +16,9 @@ const responsiveProperties = defineProperties({
     tablet: { '@media': 'screen and (min-width: 768px)' },
     desktop: { '@media': 'screen and (min-width: 1024px)' }
   },
-  defaultCondition: 'mobile',
+  defaultCondition: 'tablet',
   properties: {
-    display: ['none', 'flex', 'block', 'inline'],
+    display: ['none', 'flex', 'block', 'inline', 'inline-flex'],
     flexDirection: ['row', 'column'],
     justifyContent: [
       'stretch',
@@ -58,6 +58,7 @@ const responsiveProperties = defineProperties({
     left: position, 
     bottom: position,
     right: position,
+    objectFit: ['contain', 'cover', 'fill', 'none', 'scale-down']
   },
   shorthands: {
     padding: [
@@ -108,7 +109,6 @@ const systemProperties = defineProperties({
     borderRightWidth: borderSize,
     borderWidth: borderSize,
     boxShadow: shadows,
-    objectFit: ['contain', 'cover', 'fill', 'none', 'scale-down']
   }
 });
 

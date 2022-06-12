@@ -17,9 +17,7 @@ export const borderRadius = {
     'radius-round': '1e5px',    
 }
 
-export const BorderStyle = {
 
-}
 export const shadows = {
     'shadow-1': '0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%))',
     'shadow-2': '0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)), 0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%))',

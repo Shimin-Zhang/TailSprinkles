@@ -30,8 +30,15 @@ const Home: NextPage = () => {
           st({
             display: 'flex',
             fontFamily: 'sans-serif',
-            width: 'size-content-3',
+            width: {
+              tablet: 'size-content-3',
+              mobile: 'size-auto'
+            },
             marginY: 'size-auto',
+            marginX: {
+              tablet: 'size-auto',
+              mobile: 'size-3',
+            },
             background: 'white',
             borderRadius: 'radius-3',
             boxShadow: 'shadow-2'
@@ -51,9 +58,18 @@ const Home: NextPage = () => {
             loading="lazy" className = {
               st({
                 position: 'absolute',
-                width: 'full',
-                height: 'full',
-                objectFit: 'cover',
+                width: {
+                  tablet: 'full',
+                  mobile: 'full'
+                },
+                height: {
+                  tablet: 'full',
+                  mobile: 'size-11'
+                },
+                objectFit: {
+                  mobile: 'cover',
+                  tablet: 'cover',
+                },
                 inset: '0'
               })}/>
           </div>
@@ -61,28 +77,46 @@ const Home: NextPage = () => {
             className = {
               st({
                 flex: 'auto',
-                padding: 'size-5',
+                padding: {
+                  mobile: 'size-4',
+                  tablet: 'size-5'
+                }
               })
             }>
             <div
               className = {
                 st({
-                  display: 'flex',
-                  flexWrap: 'wrap'
+                  display: {
+                    mobile: 'flex',
+                    tablet: 'flex'
+                  },
+                  flexWrap: {
+                    mobile: 'wrap',
+                    tablet: 'wrap'
+                  },
+                  paddingY: {
+                    mobile: 'size-5'
+                  }
                 })
               }>
               <h1
                 className = {
                   st({
-                    flex: 'auto',
+                    flex: {
+                      tablet: 'auto',
+                      mobile: '1',
+                    },
                     fontSize: 'font-size-2',
                     lineHeight: 'font-lineheight-4',
                     fontWeight: 'font-weight-6',
                     color: 'gray-9',
-                    marginY: 'size-0'
+                    marginY: {
+                      tablet: 'size-0',
+                      mobile: 'size-0',
+                    }
                   })
                 }>
-                Classic Utility Jacket
+                Yellow Rain Jacket
               </h1>
               <div 
                 className = {
@@ -97,13 +131,19 @@ const Home: NextPage = () => {
               </div>
               <div className = {
                 st({
-                  width: 'full',
+                  width: {
+                    mobile: 'full',
+                    tablet: 'full',
+                  },
                   flex: 'none',
                   color:  'gray-7',
                   fontWeight: 'font-weight-5',
                   fontSize: 'font-size-0',
                   lineHeight: 'font-lineheight-0',
-                  marginTop: 'size-2'
+                  marginTop: {
+                    tablet: 'size-2',
+                    mobile: 'size-2'
+                  }
                 })
               }>
                 In stock
@@ -112,10 +152,22 @@ const Home: NextPage = () => {
             <div 
               className = {
                 st({
-                  display: 'flex',
-                  marginTop: 'size-4',
-                  marginBottom: 'size-6',
-                  paddingBottom: 'size-6',
+                  display: { 
+                    mobile: 'flex',
+                    tablet: 'flex',
+                  },
+                  marginTop: { 
+                    mobile: 'size-4',
+                    tablet: 'size-4',
+                  },
+                  marginBottom: { 
+                    mobile: 'size-6',
+                    tablet: 'size-6',
+                  },
+                  paddingBottom: { 
+                    mobile: 'size-6',
+                    tablet: 'size-6',
+                  },
                   borderColor: 'gray-2',
                   borderBottomWidth: 'border-size-1',
                   alignItems: 'baseline'
@@ -124,10 +176,16 @@ const Home: NextPage = () => {
               <div 
                 className = {
                   st({
-                    display: 'flex',
+                    display: { 
+                      mobile: 'flex',
+                      tablet: 'flex',
+                    },
                     fontSize: 'font-size-0',
                     lineHeight: 'font-lineheight-0',
-                    gap: 'size-2'
+                    gap: { 
+                      mobile: 'size-2',
+                      tablet: 'size-2'
+                    },
                   })
                 }>
                 <label>
@@ -136,14 +194,30 @@ const Home: NextPage = () => {
                   <div
                     className = {
                       st({
-                        width: 'size-7',
-                        height: 'size-7',
+                        width: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
+                        height: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
                         borderRadius: 'radius-2',
-                        display: 'flex',
+                        display: { 
+                          mobile: 'flex',
+                          tablet: 'flex',
+                        },
                         color: 'gray-1',
                         background: 'gray-9',
-                        justifyContent: 'center',
-                        alignItems: 'center'
+                        fontWeight: 'font-weight-7',
+                        justifyContent: { 
+                          mobile: 'center',
+                          tablet: 'center',
+                        },
+                        alignItems: { 
+                          mobile: 'center',
+                          tablet: 'center'
+                        },
                       })
                     }>
                     XS
@@ -154,13 +228,28 @@ const Home: NextPage = () => {
                   <div 
                     className = {
                       st({
-                        width: 'size-7',
-                        height: 'size-7',
+                        width: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
+                        height: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
                         borderRadius: 'radius-4',
-                        display: 'flex',
+                        display: { 
+                          mobile: 'flex',
+                          tablet: 'flex',
+                        },
                         color: 'gray-7',
-                        justifyContent: 'center',
-                        alignItems: 'center'
+                        justifyContent: { 
+                          mobile: 'center',
+                          tablet: 'center',
+                        },
+                        alignItems: { 
+                          mobile: 'center',
+                          tablet: 'center'
+                        },
                       })
                     }>
                     S
@@ -171,13 +260,28 @@ const Home: NextPage = () => {
                   <div 
                     className = {
                       st({
-                        width: 'size-7',
-                        height: 'size-7',
+                        width: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
+                        height: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
                         borderRadius: 'radius-4',
-                        display: 'flex',
+                        display: { 
+                          mobile: 'flex',
+                          tablet: 'flex',
+                        },
                         color: 'gray-7',
-                        justifyContent: 'center',
-                        alignItems: 'center'
+                        justifyContent: { 
+                          mobile: 'center',
+                          tablet: 'center',
+                        },
+                        alignItems: { 
+                          mobile: 'center',
+                          tablet: 'center'
+                        },
                       })
                     }>
                     M
@@ -188,13 +292,28 @@ const Home: NextPage = () => {
                   <div 
                      className = {
                       st({
-                        width: 'size-7',
-                        height: 'size-7',
+                        width: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
+                        height: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
                         borderRadius: 'radius-4',
-                        display: 'flex',
+                        display: { 
+                          mobile: 'flex',
+                          tablet: 'flex',
+                        },
                         color: 'gray-7',
-                        justifyContent: 'center',
-                        alignItems: 'center'
+                        justifyContent: { 
+                          mobile: 'center',
+                          tablet: 'center',
+                        },
+                        alignItems: { 
+                          mobile: 'center',
+                          tablet: 'center'
+                        },
                       })
                     }>
                     L
@@ -205,13 +324,28 @@ const Home: NextPage = () => {
                   <div 
                      className = {
                       st({
-                        width: 'size-7',
-                        height: 'size-7',
+                        width: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
+                        height: { 
+                          mobile: 'size-7',
+                          tablet: 'size-7',
+                        },
                         borderRadius: 'radius-4',
-                        display: 'flex',
+                        display: { 
+                          mobile: 'flex',
+                          tablet: 'flex',
+                        },
                         color: 'gray-7',
-                        justifyContent: 'center',
-                        alignItems: 'center'
+                        justifyContent: { 
+                          mobile: 'center',
+                          tablet: 'center',
+                        },
+                        alignItems: { 
+                          mobile: 'center',
+                          tablet: 'center'
+                        },
                       })
                     }>                 
                     XL
@@ -221,8 +355,21 @@ const Home: NextPage = () => {
             </div>
             <div className = {
               st({
-                display: 'flex',
-                marginBottom: 'size-6',
+                display: { 
+                  mobile: 'flex',
+                  tablet: 'flex',
+                },
+                flexDirection: {
+                  mobile: 'column',
+                  tablet: 'row'
+                },
+                gap: {
+                  mobile: 'size-3'
+                },
+                marginBottom: { 
+                  mobile: 'size-6',
+                  tablet: 'size-6',
+                },
                 fontWeight: 'font-weight-5',
                 fontSize: 'font-size-0',
                 lineHeight: 'font-lineheight-0',
@@ -231,16 +378,43 @@ const Home: NextPage = () => {
               <div
                 className = {
                   st({
-                    flex: 'auto',
-                    display: 'flex',
-                    gap: 'size-3'
+                    flex: { 
+                      mobile: 'auto',
+                      tablet: 'auto',
+                    },
+                    flexDirection: {
+                      mobile: 'column',
+                      tablet: 'row'
+                    },
+                    display: { 
+                      mobile: 'flex',
+                      tablet: 'flex',
+                    },
+                    flexWrap: {
+                      mobile: 'wrap',
+                      tablet: 'nowrap'
+                    },
+                    gap: { 
+                      mobile: 'size-3',
+                      tablet: 'size-3'
+                    },
                   })
                 }>
                 <button 
                   className = { clickable +  ' ' +  
                     st({
-                      height: 'size-8',
-                      paddingX: 'size-5',
+                      height: { 
+                        mobile: 'size-8',
+                        tablet: 'size-8',
+                      },
+                      width: {
+                        tablet: 'size-auto',
+                        mobile: 'full'
+                      },
+                      paddingX: { 
+                        mobile: 'size-5',
+                        tablet: 'size-5',
+                      },
                       fontWeight: 'font-weight-6',
                       borderRadius: 'radius-2',
                       background: 'gray-9',
@@ -252,8 +426,14 @@ const Home: NextPage = () => {
                 <button 
                   className = {[
                     st({
-                      height: 'size-8',
-                      paddingX: 'size-5',
+                      height: { 
+                        mobile: 'size-8',
+                        tablet: 'size-8',
+                      },
+                      paddingX: { 
+                        mobile: 'size-5',
+                        tablet: 'size-5',
+                      },
                       fontWeight: 'font-weight-6',
                       borderRadius: 'radius-2',
                       borderWidth: 'border-size-1',
@@ -268,12 +448,30 @@ const Home: NextPage = () => {
               <button
                 className = { clickable + ' ' +
                   st({
-                    flex: 'none',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: 'size-7',
-                    height: 'size-7',
+                    flex: { 
+                      mobile: 'none',
+                      tablet: 'none',
+                    },
+                    display: { 
+                      mobile: 'flex',
+                      tablet: 'flex',
+                    },
+                    alignItems: { 
+                      mobile: 'center',
+                      tablet: 'center',
+                    },
+                    justifyContent: { 
+                      mobile: 'center',
+                      tablet: 'center',
+                    },
+                    width: { 
+                      mobile: 'full',
+                      tablet: 'size-7',
+                    },
+                    height: { 
+                      mobile: 'size-8',
+                      tablet: 'size-7',
+                    },
                     borderRadius: 'radius-2',
                     color: 'gray-3',
                     borderWidth: 'border-size-1',
